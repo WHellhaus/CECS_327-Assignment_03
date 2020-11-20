@@ -2,4 +2,4 @@
 
 1. compile java files
 2. java UDP_Server
-3. java UDP_Client 'message' localhost
+3. java UDP_Client
