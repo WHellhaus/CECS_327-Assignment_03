@@ -11,17 +11,23 @@ public class UDP_Client{
 
         while (cont) {
             try {
-                System.out.print("What ip address would you like to send a message to: ");
-                String address = scan.nextLine();
+                //Prompting user to enter IP address.
+		System.out.print("What ip address would you like to send a message to: ");
+                //System takes in next line from user.
+		String address = scan.nextLine();
         
+		//Prompting user to enter port number.
                 System.out.print("What port number would you like to use: ");
-                int port = Integer.parseInt(scan.nextLine());
-        
+                //System takes in next line from user.
+		int port = Integer.parseInt(scan.nextLine());
+		
+        	//Prompting user to enter message to IP address.
                 System.out.print("What message would you like to send: ");
-                String message = scan.nextLine();
+                //System takes in next line from user.
+		String message = scan.nextLine();
 
                 aSocket = new DatagramSocket();
-                aSocket.setSoTimeout(10*1000);
+                aSocket.setSoTimeout(10*10000);
 
                 byte[] m = message.getBytes();
                 InetAddress aHost = InetAddress.getByName(address);
